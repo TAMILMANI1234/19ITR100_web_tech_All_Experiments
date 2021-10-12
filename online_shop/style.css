@@ -1,0 +1,195 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    background-color: gray;
+}
+.wraper{
+    width: 100%;
+    height: auto;
+    position: sticky;
+}
+.header{
+    width: 100%;
+    height: 100px;
+    background-color: rgb(76, 47, 219);
+    padding: 10px;
+    position: sticky;
+}
+.header h2{
+    text-align: center;
+    
+    
+}
+.image{
+    width: 50px;
+    height: 50px;
+    /*position: relative;*/
+}
+.image img{
+    width: 290px;
+    height: 100px;
+    margin-top: -30px;
+  /*  position: relative;*/
+}
+.header table{
+    margin-left: 28%;
+    margin-top: -60px;
+}
+
+.country table {
+    margin-left: 77%;
+    margin-top: -70px;
+
+}
+.image2 img{
+    width: 110px;
+    height: 90px;
+    margin-top: -100px;
+    position: relative;
+    margin-left: 300px;
+  
+}
+.login{
+    width: 98%;
+    height: auto;
+   
+}
+
+.login ul{
+  
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    background-color: #333333;
+}
+.login ul li a{
+    float: left;
+    display: inline;
+    
+}
+.login ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+  }
+ .login ul li a:hover {
+    background-color: #5a4b4b;
+  }
+
+.condent {
+    width: 100%;
+    height:auto;
+    margin-left: 10px;
+    background-color: rgb(66, 61, 61);
+    /*position: static;*/
+
+}
+.condent img{
+    width: 30%;
+    
+    margin-left: 10px;
+    padding: 10px 10px;
+}
+.condent .column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+  }
+  
+  
+ .condent .row::after {
+    content: "";
+    clear: both;
+    display: table;
+    margin-top: -80px;
+  }
+  
+  .condent .column1 {
+    float: right;
+    width: 33.33%;
+    padding: 5px;
+  }
+  
+  
+ .condent .row1::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+.login .condent h1{
+    font-family: poppins;
+    font-size: 40px;
+    -webkit-animation:linear infinite alternate;
+    -webkit-animation-name: run;
+    position:absolute;
+   -webkit-animation-duration: 10s;
+ }
+ @-webkit-keyframes run {
+   0% { left: 10%;}
+   50%{ left : 60%;}
+   100%{ left: 10%;}
+ }
+ .login .con2 {
+    background-color: #34495E ;
+    width: 100%;
+    height: auto;
+}
+ .login .con2 h1{
+   
+    font-family: poppins;
+    font-size: 40px;
+    -webkit-animation:linear infinite alternate;
+    -webkit-animation-name: run;
+    position:absolute;
+   -webkit-animation-duration: 10s;
+ }
+ @-webkit-keyframes run {
+   0% { left: 10%;}
+   50%{ left : 60%;}
+   100%{ left: 10%;}
+ }
+ .login .con3 {
+  background-color: #8679d1 ;
+  width: 100%;
+  height: auto;
+}
+.login .con3 h1{
+   
+  font-family: poppins;
+  font-size: 40px;
+  -webkit-animation:linear infinite alternate;
+  -webkit-animation-name: run;
+  position:absolute;
+ -webkit-animation-duration: 10s;
+}
+@-webkit-keyframes run {
+ 0% { left: 10%;}
+ 50%{ left : 60%;}
+ 100%{ left: 10%;}
+}
+
+ .login .final {
+   
+  background-color: white;
+  width: 100%;
+  height: auto;
+ }
+ .login .final button{
+   width: 100%;
+   height: 50px;
+   background-color: #008CBA;
+   font-size: 20px;
+   border-radius: 12px;
+   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+ }
+ .login .final button:hover {
+   opacity: 1
+  }

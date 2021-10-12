@@ -1,0 +1,74 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	text-align: center;
+    background-image: url("image1/jackson-so-_t-l5FFH8VA-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+.heading{
+    width: 100%;
+    top: 10px;
+	position: fixed;
+	height: 1500px;
+}
+.heading h1{
+    font-family: poppins;
+    font-size: 40px;
+}
+.heading h2{
+    font-family: poppins;
+    font-size: 25px;
+}
+.wraper{
+    width: 100%;
+    top: 200px;
+	position: fixed;
+	height: 1500px;
+}
+.wraper h2{
+    font-family: poppins;
+    font-size: 40px;
+    -webkit-animation:linear infinite alternate;
+    -webkit-animation-name: run;
+    position:absolute;
+   -webkit-animation-duration: 10s;
+ }
+ @-webkit-keyframes run {
+   0% { left: 38%;}
+   50%{ left : 70%;}
+   100%{ left: 20%;}
+ }
+.table{
+    width: 100%;
+    top: 300px;
+    margin-left: 15%;
+	position: fixed;
+	height: 1500px;
+}
+
+.table th{
+    text-align: center;
+    font-size: 30px;
+}
+.table td{
+    text-align: center;
+    font-size: 25px;
+}
+.name{
+    width: 100%;
+    top: 600px;
+    margin-left: 25%;
+    position: absolute;
+	height: auto;
+}
+.name table{
+    margin-left: 40%;
+}
+.name th{
+    text-align: center;
+    font-size: 30px;
+}
