@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EB Bill Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script>
+    function f0()
+    {
+      
+           var a= select.item[select.item.selectedIndex].text;
+         
+           var unit=document.getElementById("t2").value;
+           var result;
+           
+
+             if(a=="Domestic")
+            {
+                             if(unit<=100){
+                                   result=unit*0+0;
+                               
+                             }else if(unit<=200){
+                                 result =(100*0)+((unit-100)*1.50)+20.0;
+                              
+                             }else if(unit<=500){
+                                 result=(100*0)+(100*2.00)+((unit-200)*3.00)+30;
+                               
+                             }else{
+                                 result=(100*0)+(100*3.50)+(300*4.60)+((unit-500)*6.60)+50;
+                               
+                             }
+
+                             document.getElementById("ans").innerHTML =("Your Amount Rs: "+result);
+            }
+
+        if(a=="Commercial")
+                        {        
+                            var total=0;
+                            var sub=document.getElementById('output').selectedOptions[0].value;
+                        
+                        if(sub==="III-A(2)")
+                            {
+                                if(unit<=750)
+                            {
+                                var total=0;
+                            }  
+                        else if(unit>750&&unit<=1000)
+                            {
+                                var total=unit*2.3;
+                            }  
+                        else if(unit>1000 && unit<=1500)
+                            {
+                                var total=1000*2.3+(unit-1000)*2.3;
+                            }  
+                        else 
+                            {
+                                var total=1000*2.3+500*3.45+(unit-1500);
+                            } 
+                            
+                        }
+                        if(sub=="I-C")
+                            {
+                                total=unit*4.60;
+                            }
+                        if(sub=="II-A")
+                            {
+                                total=unit*6.35;
+                            }
+                        if(sub=="II-B(1)")
+                            {
+                                total=unit*5.75;
+                            }
+                        if(sub=="II-B(2)")
+                            {
+                                total=unit*7.50;
+                            }
+                        if(sub=="II-C")
+                        {
+                            if(unit>0 && unit<=120)
+                            {
+                                total=unit*2.85;
+                            }
+                            else{
+                                total=120*2.85+(unit-120)*5.75;
+                            }
+                        }
+                        if(sub=="III-A(1)")
+                        {
+                            if(unit>0 && unit<=500)
+                            {
+                                total=unit*4.0;
+                            }
+                            else{
+                                total=500*4.0+(unit-120)*4.60;
+                            }
+                        }
+                        if(sub=="III-B")
+                        {
+                            total=unit*6.35;
+                        }
+                        if(sub=="IV")
+                        {
+                            total=unit*3.22;
+                        }
+                        if(sub=="V")
+                        {
+                            if(unit>0 && unit<=100)
+                            {
+                                total=unit*5.0;
+                            }
+                            else{
+                                total=100*5.0+(unit-100)*8.05;
+                            }
+                        }
+                        if(sub=="VI")
+                        {
+                            total=unit*12;
+                        }
+                        document.getElementById("ans").innerHTML =("Your Amount Rs: "+total);;
+                    }
+}
+
+    function get()
+    {
+        var getValue=select.item[select.item.selectedIndex].text;
+        if(getValue==="Commercial")
+        {
+        var a=["I-C","II-A","II-B(1)","II-B(2)","II-C","III-A(1)","III-A(2)","III-B","IV","V","VI"];
+            var string="";
+             
+             for(i=0;i<a.length;i++)
+             {
+                 string=string+"<option value="+a[i]+">"+a[i]+"</option>";
+             }
+            var duration="";
+        }
+        else
+        {
+           var string=""; 
+           var d="Bi-monthly";
+           var duration="<option value="+d+">"+d+"</option>"
+           
+        }
+        document.getElementById("duration").innerHTML=duration
+        document.getElementById("output").innerHTML=string;
+    }
+                                            
+
+
+    
+</script>
+<body>
+    <div class="header">
+        <table width="100%" style="padding-left: 140px;padding-top: 20px;padding-bottom: 70px;">
+            <tr>
+                <td> <img src="photo/logo1.png" alt="" style="left: -40px;"></td>
+                <td><img src="photo/minagam.png" alt="" width="170"></td>
+            </tr>
+        </table>
+       
+        
+         
+    </div>
+        <br><br>   
+           
+    <section>
+        <div class="box">
+            <div class="head" >
+                <ul style="list-style: none; margin-left:80px;">
+                    <li style=" display: inline; padding-right:5em">Home</li>
+                    <li style=" display: inline; padding-right:5em">FAQ</li>
+                    <li style=" display: inline;padding-right:5em">Guide lines  </li>
+                    <li style=" display: inline;padding-right:5em"> Bill Calculator  </li>
+                    <li style=" display: inline;padding-right:5em"> QuickPay</li>
+                   
+
+                </ul>
+            </div>
+                          <h4 style="text-align: center; ">Bill Calculator</h4>
+            <br>
+            <form  style="margin-left: 200px;" name="select" >
+               <table width="80%">
+                   <tr>
+                        <td style="color: rgb(1, 1, 100); font-weight: bold;">Tariff Check</td> 
+                        <td> <select name="item"  onchange="get()" >
+                               
+                                <option value="Domestic">Domestic</option>
+                                <option value="Commercial">Commercial</option>
+                            </select></td>
+                    </tr>
+                    <tr>
+                        <td style="color: rgb(1, 1, 100); font-weight: bold;">SUBDIVISION(Not Required for Domestic Tariff)</td>
+                        <td><select id="output" ></select></td>
+                    </tr>
+
+                    <tr>
+                        <td style="color: rgb(1, 1, 100); font-weight: bold;">Billing cycle</td> 
+                        <td> <select name="item1" id="duration">
+                             <option value="Commercial">Select</option>
+                             <option value="Domestic">Bi Monthly</option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                       
+                        <td style="color: rgb(1, 1, 100); font-weight: bold;">Constrated Load(Not Required for Domestic Tariff)</td> 
+                        <td><input type="text"> </td>
+                    </tr>
+                    <tr>
+                        <td style="color: rgb(1, 1, 100); font-weight: bold;">Consumer Units:</td> 
+                        <td><input type="text" id="t2" placeholder="enter units"> </td>
+                    </tr>
+                    <tr>
+                        <td style="color: rgb(1, 1, 100); font-weight: bold;">KVAH(Not required for "Domestic Tariff)</td> 
+                        <td><input type="text"> </td>
+                    </tr>
+
+               </table>    
+            </form>
+             
+                 
+            <br><br>
+             <button id="btn1" onclick="f0()"> Calculate</button>
+
+             <br><br><br>
+             <div class="out">
+                <p id="ans" style="text-align: center;"> WELCOME TNEB CALCULATION</p>
+             </div>
+           
+
+             <br><br><br>
+            <div class="head" >
+                      <p style="text-align: center;">CopyRight @ 2013.Tamilnadu Generation and Distribution Corporation Limitted</p>
+                      <p style="text-align: center;">This Website is best viewed in EB 8+,Firefox 3+ and Google Chrom 3+ @ 1024 x 768 resolution</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

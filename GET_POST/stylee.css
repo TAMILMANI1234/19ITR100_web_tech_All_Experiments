@@ -1,0 +1,22 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+.container{
+    width: 100%;
+    height: 100px;
+    background-color: darkgrey;
+    text-align: center;
+}
+
+div{
+    box-shadow: 10px 10px 8px 10px #888888;
+    width: 90%;
+    background-color: yellow;
+}
+ td{
+    height: 20px;
+    font-size: 20px;
+    padding: 5px;
+    font-weight: bold;
+}

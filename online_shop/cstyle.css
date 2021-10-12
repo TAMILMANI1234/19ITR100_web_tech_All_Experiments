@@ -1,0 +1,35 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    text-align: center;
+    background-image: url("photo/ppp.jpg");
+    background-repeat: no-repeat;
+}
+.table{
+    width: 100%;
+  }
+.table{
+    margin-left: 37%;
+    position: fixed;
+}
+.table td{
+    height: 20px;
+    font-size: 20px;
+    padding: 15px;
+    font-weight: bold;
+}
+button{
+    color: black;
+    font-size: 15px;
+    padding: 10px 25px;
+  /* background: transparent;*/
+    border: 1px solid blue;
+    border-radius: 20px;
+   /* outline: none;*/
+    cursor: pointer;
+   margin-left: -75%;    
+}
